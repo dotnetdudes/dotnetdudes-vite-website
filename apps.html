@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dotnetdudes Apps</title>
+    <meta name="author" content="John Morton" />
+    <meta name="description" content="Dotnetdudes main web hub" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Dotnetdudes website" />
+    <meta property="og:title" content="Dotnetdudes website apps page" />
+    <meta
+      property="og:description"
+      content="Dotnetdudes development and applications"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.dotnetdudes.com" />
+    <meta property="og:image" content="https://www.dotnetdudes.com/dudes.png" />
+    <meta property="og:image:alt" content="Dotnetdudes logo" />
+    <meta property="og:image:width" content="67" />
+    <meta property="og:image:height" content="67" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Dotnetdudes" />
+    <!-- ICONS -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="favicons/apple-touch-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="favicons/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="favicons/apple-touch-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="favicons/apple-touch-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="favicons/apple-touch-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="favicons/apple-touch-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="favicons/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="196x196"
+      href="favicons/apple-touch-icon-196x196.png"
+    />
+    <link rel="icon" sizes="16x16" href="favicons/favicon-16x16.png" />
+    <link rel="icon" sizes="32x32" href="favicons/favicon-32x32.png" />
+    <link rel="icon" sizes="128x128" href="favicons/favicon-128x128.png" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta
+      name="msapplication-TileImage"
+      content="favicons/mstile-144x144.png"
+    />
+    <meta
+      name="msapplication-square70x70logo"
+      content="favicons/mstile-70x70.png"
+    />
+    <meta
+      name="msapplication-square150x150logo"
+      content="favicons/mstile-150x150.png"
+    />
+    <meta
+      name="msapplication-wide310x150logo"
+      content="favicons/mstile-310x150.png"
+    />
+    <meta
+      name="msapplication-square310x310logo"
+      content="favicons/mstile-310x310.png"
+    />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <!-- Page Preloader CSS -->
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      .loading-page {
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        animation: pulsebg 15s ease infinite;
+      }
+      .logotype {
+        margin-top: 3rem;
+        margin-right: auto;
+        margin-left: auto;
+        user-select: none;
+      }
+    </style>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../styles/apps.scss" />
+    <!-- structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.dotnetdudes.com/index.html#company",
+        "name": "Dotnetdudes",
+        "url": "https://dotnetdudes.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Balcatta, WA",
+          "addressCountry": "Australia",
+          "postalCode": "6021",
+          "streetAddress": "33 Bruton Street"
+        },
+        "logo": "https://dotnetdudes.com/dudes.png",
+        "description": "A sofware development company focused on Microsoft .Net, React and React Native",
+        "sameAs": [
+          "https://www.linkedin.com/company/3506154/admin/feed/posts/",
+          "https://github.com/dotnetdudes"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+61402888801",
+          "contactType": "Customer service"
+        }
+      }
+    </script>
+    <!-- import web components and js -->
+    <script type="module">
+      import "./components/Header/Header.js";
+      import "./components/Footer/Footer.js";
+    </script>
+  </head>
+  <body>
+    <!-- preloader -->
+    <div class="loading-page" id="loadingpanel">
+      <img
+        src="../assets/images/dudes.png"
+        alt="Dotnetdudes logo"
+        class="logotype"
+      />
+    </div>
+    <!-- main page header -->
+    <page-header id="pageHeader"></page-header>
+    <!-- Main content area -->
+    <main id="mainArticle">
+      <h1>Apps</h1>
+    </main>
+    <aside id="siteAds"></aside>
+    <page-footer id="pageFooter"></page-footer>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
