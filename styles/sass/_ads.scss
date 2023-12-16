@@ -1,18 +1,18 @@
 @import './variables';
 
 .starter {
-    shape-outside: url('../../assets/icons/rocket_launch_FILL0_wght200_GRAD0_opsz48.svg');
+    shape-outside: url('/icons/rocket_launch_FILL0_wght200_GRAD0_opsz48.svg');
     shape-margin: 5rem;
     // border: 1px solid green;
 }
 
 .blog {
-    shape-outside: url('../assets/images/sticky_note_2_FILL0_wght200_GRAD0_opsz48.svg');
+    shape-outside: url('icons/sticky_note_2_FILL0_wght200_GRAD0_opsz48.svg');
     shape-margin: 5rem;
 }
 
 .dudes-apps {
-    shape-outside: url('../assets/images/install_mobile_dark.svg');
+    shape-outside: url('icons/install_mobile_dark.svg');
     shape-margin: 5rem;
 }
 

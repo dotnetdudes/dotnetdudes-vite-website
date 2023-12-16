@@ -1,7 +1,7 @@
 const AdsTemplate = /*html*/ `
 <div>
     <svg class="dudes-ads dudes-apps">
-        <use xlink:href='icons/install_mobile_FILL0_wght200_GRAD0_opsz48.svg#mobile' href="icons/install_mobile_FILL0_wght200_GRAD0_opsz48.svg#mobile"></use>
+        <use xlink:href='/icons/install_mobile_FILL0_wght200_GRAD0_opsz48.svg#mobile' href="/icons/install_mobile_FILL0_wght200_GRAD0_opsz48.svg#mobile"></use>
     </svg>
     <h2>Our Apps</h2> 
     <p>
@@ -18,7 +18,7 @@ const AdsTemplate = /*html*/ `
 </div>
 <div>
     <svg class="dudes-ads starter">
-        <use xlink:href='icons/rocket_launch_FILL0_wght200_GRAD0_opsz48.svg#rocket' href="icons/rocket_launch_FILL0_wght200_GRAD0_opsz48.svg#rocket"></use>
+        <use xlink:href='/icons/rocket_launch_FILL0_wght200_GRAD0_opsz48.svg#rocket' href="/icons/rocket_launch_FILL0_wght200_GRAD0_opsz48.svg#rocket"></use>
     </svg>
     <h2>React Starter Kits</h2>
     <p>
@@ -36,7 +36,7 @@ const AdsTemplate = /*html*/ `
 </div>
 <div>
     <svg class="dudes-ads blog">
-        <use xlink:href='icons/sticky_note_2_FILL0_wght200_GRAD0_opsz48.svg#stickyNote' href="icons/sticky_note_2_FILL0_wght200_GRAD0_opsz48.svg#stickyNote"></use>
+        <use xlink:href='/icons/sticky_note_2_FILL0_wght200_GRAD0_opsz48.svg#stickyNote' href="/icons/sticky_note_2_FILL0_wght200_GRAD0_opsz48.svg#stickyNote"></use>
     </svg>
     <h2>Dotnetdudes blog</h2> 
     <p>Development is fun, that's an important thing to remember. This is our attempt to 

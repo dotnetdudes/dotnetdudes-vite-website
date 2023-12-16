@@ -2,7 +2,7 @@ header {
 
     .logo-image {
         display: inline-block;
-        background-image: url('../../assets/images/dudes.png');
+        background-image: url('/dudes.png');
         background-size: cover;
         height: 42px;
         width: 42px;
@@ -80,7 +80,7 @@ a {
 header {
 
     .logo-image {
-        background-image: url('../../assets/images/dudes-dark.png');
+        background-image: url('/dudes-dark.png');
     }
     a {
 

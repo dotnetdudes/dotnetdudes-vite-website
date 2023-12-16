@@ -40,27 +40,27 @@
         
 
         &.mui {
-            background-image: url('../../assets/icons/mui.svg');
+            background-image: url('/icons/mui.svg');
         }
 
         &.jest {
-            background-image: url('../../assets/icons/jest.svg');
+            background-image: url('/icons/jest.svg');
         }
 
         &.testing-library {
-            background-image: url('../../assets/icons/testing-library.svg');
+            background-image: url('/icons/testing-library.svg');
         }
 
         &.sass {
-            background-image: url('../../assets/icons/sass.svg');
+            background-image: url('/icons/sass.svg');
         }
 
         &.typescript {
-            background-image: url('../../assets/icons/typescript.svg');
+            background-image: url('/icons/typescript.svg');
         }
 
         &.docker {
-            background-image: url('../../assets/icons/docker.svg');
+            background-image: url('/icons/docker.svg');
         }
     }
 }
@@ -147,23 +147,23 @@
         }
 
         &.cra-item {
-            background-image: url('../../assets/icons/react-boilerplate-cra.svg');
+            background-image: url('/icons/react-boilerplate-cra.svg');
         }
 
         &.rbp-item {
-            background-image: url('../../assets/icons/react-2.svg');
+            background-image: url('/icons/react-2.svg');
         }
 
         &.infinite-red-item {
-            background-image: url('../../assets/icons/infinite-red.svg');
+            background-image: url('/icons/infinite-red.svg');
         }
 
         &.redux-saga-item {
-            background-image: url('../../assets/icons/saga.svg');
+            background-image: url('/icons/saga.svg');
         }
 
         &.redux-toolkit-item {
-            background-image: url('../../assets/icons/redux-toolkit.svg');
+            background-image: url('/icons/redux-toolkit.svg');
         }
     }
 }
