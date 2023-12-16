@@ -1,11 +1,11 @@
 import { create } from 'apisauce';
 
-const createDudesApi = () => {
+const createBlogsApi = () => {
     const api = create({
-      baseURL: import.meta.env.VITE_API_URL,
+      baseURL: import.meta.env.VITE_BLOGS_API_URL,
       credentials: 'omit',
       headers: {
-        'X-DUDES-Key': import.meta.env.VITE_API_KEY
+        'Bearer': 'token',
       }
     });
   
@@ -15,4 +15,4 @@ const createDudesApi = () => {
       postContactForm,
     };
   };
-  export default createDudesApi();
+  export default createBlogsApi();
