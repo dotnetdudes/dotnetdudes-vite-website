@@ -36,8 +36,6 @@ class Header extends HTMLElement {
         const signOutButtonContainer = document.getElementsByClassName(
             'signOutButtonContainer'
         );
-        // signOutButtonContainer.style.display = 'inline-block';
-        //[].map.call(elements, elem => elem.textContent);
         [].map.call(signOutButtonContainer, elem => {
             elem.style.display = 'inline-block';
         });
@@ -51,7 +49,6 @@ class Header extends HTMLElement {
         const signOutButtonContainer = document.getElementsByClassName(
             'signOutButtonContainer'
         );
-        // signOutButtonContainer.style.display = 'none';
         [].map.call(signOutButtonContainer, elem => {
             elem.style.display = 'none';
         });
@@ -80,20 +77,14 @@ class Header extends HTMLElement {
         try {
             const authenticated = await keycloak.init({
                 checkLoginIframe: false,
-                // onLoad: 'check-sso',
-                /*silentCheckSsoRedirectUri: `${location.origin}/silent-sso-check.html`,*/
+                onLoad: 'check-sso',
+                silentCheckSsoRedirectUri: `${location.origin}/silent-sso-check.html`,
             });
             if (authenticated) {
                 this.showSignOut();
             } else {
                 this.showSignIn();
             }
-            // console.log(
-            //     `User is ${
-            //         authenticated ? 'authenticated' : 'not authenticated'
-            //     }`
-            // );
-            // console.log(keycloak);
         } catch (error) {
             console.error('Failed to initialize adapter:', error);
         }
