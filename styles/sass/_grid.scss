@@ -1,0 +1,48 @@
+body { 
+    display: grid;
+    grid-template-areas: 
+      "page-header page-header page-header"
+      "article article ads"
+      "page-footer page-footer page-footer";
+    grid-template-rows: 80px 1fr 70px;  
+    grid-template-columns: 20% 1fr 35%;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+    }  
+  header {
+    padding: 1.2em;
+    display:flex;
+    justify-content: space-between;
+  }
+  #mainArticle, #siteAds {
+    padding: 1.2em;
+    }
+  #pageHeader {
+    grid-area: page-header;
+    }
+  #pageFooter {
+    grid-area: page-footer;
+    }
+  #mainArticle { 
+    grid-area: article; 
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    }
+  #siteAds { 
+    grid-area: ads; 
+    } 
+  /* Stack the layout on small devices/viewports. */
+  @media all and (max-width: 768px) {
+    body { 
+      grid-template-areas: 
+        "page-header"
+        "article"
+        "ads"
+        "page-footer";
+      grid-template-rows: 80px 1fr 1fr 70px;  
+      grid-template-columns: 1fr;
+   }
+  }

@@ -1,0 +1,19 @@
+/* ./styles/styles.scss */
+@use './sass/grid';
+@use './sass/nav';
+@use './sass/hamburger';
+@use './sass/header';
+@use './sass/footer';
+@use './sass/ninja';
+@use './sass/ads';
+@use './sass/devs';
+
+html, body {
+    height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #e3f2fd;
+    }
+}

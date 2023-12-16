@@ -1,0 +1,60 @@
+@import './variables';
+
+.dudes-devs {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-bottom: 0;
+    border-radius: 2rem;
+
+    .devs-item {
+        width: 22%;
+
+        .devs-img {
+            color: grey;
+            width: 100%;
+            height:auto;
+
+            &:hover {
+                color: $hover-color-home;
+            }
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .dudes-devs {
+        background-color: $features-background-dark;
+    }
+}
+
+@media all and (max-width: 1100px) {
+    .dudes-devs {
+    
+        .devs-item {
+            width: 46%;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .dudes-devs {
+    
+        .devs-item {
+            width: 100%;
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .dudes-devs {
+    
+        .devs-item {
+            width: 46%;
+            margin-bottom: 1rem;
+        }
+    }
+}
