@@ -1,0 +1,251 @@
+@import './variables';
+
+.starter-kit-features {
+    background-color: $features-background;
+    min-height: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items:stretch;
+    gap: 0.3rem;
+
+    .starter-kit-feature-item {
+        font-family: 'Permanent Marker', cursive;
+        font-size: 1rem;
+        flex: 1;
+        display: flex;
+        background-size: auto 50%;
+        background-repeat: no-repeat;
+        background-position: center 20%;
+        cursor: pointer;
+
+        a {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-end;
+            align-items: center;
+            text-decoration: none;
+            color: $base-text-color;
+
+            &:hover {
+                color: $hover-color;
+            }
+
+            .item-text {
+                display:inline;
+            }
+        }
+
+        
+
+        &.mui {
+            background-image: url('/icons/mui.svg');
+        }
+
+        &.jest {
+            background-image: url('/icons/jest.svg');
+        }
+
+        &.testing-library {
+            background-image: url('/icons/testing-library.svg');
+        }
+
+        &.sass {
+            background-image: url('/icons/sass.svg');
+        }
+
+        &.typescript {
+            background-image: url('/icons/typescript.svg');
+        }
+
+        &.docker {
+            background-image: url('/icons/docker.svg');
+        }
+    }
+}
+
+.starter-kits {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+
+    .starter-kit-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+        flex-basis: 300px;
+
+        .starter-kit-item-content {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            border: 1px solid $base-text-color;
+            border-radius: 2rem;
+            padding: 1rem;
+
+            .starter-logo {
+                width: 6rem;
+                height: 6rem;
+            }
+
+            ul {
+                padding: 0;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin: 0;
+                margin-bottom: 1rem;
+            }
+
+            .starter-button {
+               
+                .repo-logo {
+                    height: 3rem;
+                    width: 3rem;
+                }
+            }
+
+            
+        }        
+    }
+}
+
+.starters-we-love {
+    list-style:none;
+    margin: 0;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+
+    .item {
+        font-size: 1.6rem;
+        border-bottom: 1px solid $base-text-color;
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 3rem auto; 
+        margin: 0;        
+        cursor: pointer; 
+
+        a {
+            display:block;
+            color:$base-text-color;
+            text-decoration: none;
+            height: 100%;
+            padding: 1.2rem 6rem;
+
+            &:hover {
+                color: $hover-color;
+            }
+        }
+
+        &.cra-item {
+            background-image: url('/icons/react-boilerplate-cra.svg');
+        }
+
+        &.rbp-item {
+            background-image: url('/icons/react-2.svg');
+        }
+
+        &.infinite-red-item {
+            background-image: url('/icons/infinite-red.svg');
+        }
+
+        &.redux-saga-item {
+            background-image: url('/icons/saga.svg');
+        }
+
+        &.redux-toolkit-item {
+            background-image: url('/icons/redux-toolkit.svg');
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .starter-kit-features {
+        border-radius: 1rem;
+        background-color: $features-background-dark;
+
+        .starter-kit-feature-item {
+            a {
+                color: $base-text-color-dark;
+    
+                &:hover {
+                    color: $hover-color;
+                }
+            }
+        }        
+    }
+
+    .starter-kits {
+        .starter-kit-item {
+            .starter-kit-item-content {
+                background-color: $features-background-dark;
+            }   
+        }
+    }
+
+    .starters-we-love {
+        background-color: $features-background-dark;
+        padding: 1rem;
+        padding-bottom: 2rem;
+        padding-right: 0.2rem;
+        border-radius: 2rem;
+
+        .item {
+            a {
+                color: $base-text-color-dark;
+
+                &:hover {
+                    color: $hover-color;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1250px) {
+    .starter-kit-features {
+
+        .starter-kit-feature-item {
+            font-size: 0.8rem;
+        }
+    }    
+}
+
+@media all and (max-width: 1200px) {
+    .starters-we-love {
+    
+        .item {
+            font-size: 1rem;
+            background-size: 2rem auto; 
+
+            a {
+                padding: 1.2rem 3rem;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .starter-kit-features {
+        min-height: 5rem;
+
+        .starter-kit-feature-item {
+            background-position: center;
+            
+            a{
+                .item-text {
+                    display: none;
+                }
+            }
+        }
+    }    
+}

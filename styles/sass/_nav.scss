@@ -1,0 +1,120 @@
+nav {
+    /* Nav menu */
+&.nav {
+    max-height: 0;
+    transition: max-height .5s ease-out;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 80;
+    background-color: #000;
+    overflow: hidden;
+    z-index: 12;
+
+        ul {
+            list-style: none;
+
+            &.menu {
+                padding: 0;
+                li {                    
+                        padding: 0;
+
+                        a{
+                            text-decoration: none;
+                            display: block;
+                            position: relative;
+                            color: #fff;
+                            padding: 30px;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                transform: scaleX(0);
+                                height: 2px;
+                                bottom: 0;
+                                left: 0;
+                                background-color: #0087ca;
+                                transform-origin: bottom right;
+                                transition: transform 0.25s ease-out;                                
+                            }
+
+                            &:hover {
+
+                                &::after {
+                                    transform: scaleX(1);
+                                    transform-origin: bottom left;
+                                }
+                            }
+                    }
+                }                
+            }
+        }
+    }
+}
+
+/* Responsiveness */
+@media (min-width: 950px) {
+    nav {
+        &.nav{
+            max-height: none;
+            top: 0;
+            position: relative;
+            float: right;
+            width: fit-content;
+            background-color: transparent;
+
+            ul {
+
+                &.menu {
+                    
+                    li {
+                        float: left;
+                        padding-right: 30px;
+                        padding-top: 0;
+
+                        &:last-child {
+                            padding-right: 0;
+                        }
+
+                        
+
+                        a {
+                            padding: 0;
+                            padding-top: 10px;
+                            color: #000;
+
+                            &::after {
+                                background-color: #000;                                
+                            } 
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    
+}
+
+/* Dark Mode */
+@media (min-width: 950px) and (prefers-color-scheme: dark) {
+    nav {
+        &.nav {
+            ul {
+                &.menu {
+                    li {
+                        a {
+                            color: #e3f2fd;
+
+                            &::after {
+                                background-color:#0087ca;                                
+                            } 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

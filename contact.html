@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Dotnetdudes Web</title>
+    <title>Dotnetdudes Apps</title>
     <meta name="author" content="John Morton" />
     <meta name="description" content="Dotnetdudes main web hub" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="Dotnetdudes website" />
-    <meta property="og:title" content="Dotnetdudes website home page" />
+    <meta property="og:title" content="Dotnetdudes website apps page" />
     <meta
       property="og:description"
       content="Dotnetdudes development and applications"
@@ -115,7 +115,7 @@
       }
     </style>
     <!-- Main CSS -->
-    <link rel="stylesheet" href="./styles/index.scss" />
+    <link rel="stylesheet" href="./styles/contact.scss" />
     <!-- structured data -->
     <script type="application/ld+json">
       {
@@ -146,18 +146,17 @@
     </script>
     <!-- import web components and js -->
     <script type="module">
-      import "./components/Header/Header.js";
-      import "./components/Footer/Footer.js";
-      import "./components/Ninja/Ninja.js";
-      import "./components/Ads/Ads";
-      // import "./components/Devs/Devs";
+      import "./components/Header/Header";
+      import "./components/Footer/Footer";
+      import "./components/ContactInfo/ContactInfo";
+      import "./components/ContactForm/ContactForm";
     </script>
   </head>
   <body>
     <!-- preloader -->
     <div class="loading-page" id="loadingpanel">
       <img
-        src="dudes.png"
+        src="/dudes.png"
         alt="Dotnetdudes logo"
         class="logotype"
       />
@@ -166,61 +165,11 @@
     <page-header id="pageHeader"></page-header>
     <!-- Main content area -->
     <main id="mainArticle">
-      <css-ninja></css-ninja>
-      <h1 id="company">Dotnetdudes Developers</h1>
-      <div class="dudes-devs">
-        <div class="devs-item">
-          <svg class="devs-img">
-            <use
-              xlink:href="icons/laptop-mobile.svg#laptopMobile"
-              href="icons/laptop-mobile.svg#laptopMobile"
-            ></use>
-          </svg>
-          <p>
-            have extensive experience in multi platform application development
-            and integration.
-          </p>
-        </div>
-        <div class="devs-item">
-          <svg class="devs-img">
-            <use
-              xlink:href="icons/site.svg#wwwIcon"
-              href="icons/site.svg#wwwIcon"
-            ></use>
-          </svg>
-          <p>
-            develop high quality, accessible, performance driven web and mobile
-            applications in house or on prem.
-          </p>
-        </div>
-        <div class="devs-item">
-          <svg class="devs-img">
-            <use
-              xlink:href="icons/data-transfer.svg#dataTransfer"
-              href="icons/data-transfer.svg#dataTransfer"
-            ></use>
-          </svg>
-          <p>
-            can help you out dealing with large amounts of data, make sure the
-            streams are not tears.
-          </p>
-        </div>
-        <div class="devs-item">
-          <svg class="devs-img">
-            <use
-              xlink:href="icons/briefcase.svg#briefcaseIcon"
-              href="icons/briefcase.svg#briefcaseIcon"
-            ></use>
-          </svg>
-          <p>
-            are mainly remote, however we can travel to work on your site, we're
-            great collaborators in any event
-          </p>
-        </div>
-      </div>
+      <h1>Get in touch</h1>
+      <contact-form></contact-form>
     </main>
     <aside id="siteAds">
-      <dudes-ads></dudes-ads>
+      <contact-info></contact-info>
     </aside>
     <page-footer id="pageFooter"></page-footer>
     <script type="module" src="./js/index.js"></script>

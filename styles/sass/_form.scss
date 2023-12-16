@@ -1,0 +1,162 @@
+@import './variables';
+
+.form-error {
+    border: 2px solid $error-color !important;
+}
+
+.text-error {
+    color: $error-color;
+}
+
+.home-form-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 20rem;
+
+    .home-form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+        grid-gap: 0.7rem;
+        padding: 1.2em;
+
+        .home-input {
+            width: calc( 100% - 2em);
+        }
+
+        label {
+            color: #708090;
+            /* Moves the label on TOP of the placeholder */
+            transform: translate(1.25rem,-2.5rem);
+            transform-origin: 0 0; /* Used later for transitions */
+            transition: all 500ms;
+            user-select: none;
+            pointer-events: none; 
+        }
+
+        input,
+        textarea,
+        button {
+          padding: 1rem;
+          border: 1px solid $border-color;
+          border-radius: 2rem;          
+        }
+
+        input, textarea {
+            &:focus {
+                outline: none;
+                border-top-color: rgba(0,0,0,0.1);
+            }
+
+            &::placeholder {
+                display: none;
+                color: transparent;
+                user-select: none; /* Standard syntax */
+            }
+    
+                &:not(:placeholder-shown) {
+                    border-top-color: rgba(0, 0, 0, 0.5);
+                }
+        }
+
+        input {
+            &:focus + label, &:not(:placeholder-shown) + label {
+                transform: translateY(-5.6rem) scale(1);
+                color: $base-text-color;
+            }
+        }
+
+        textarea {
+            &:focus + label, &:not(:placeholder-shown) + label {
+                transform: translateY(-6.6rem) scale(1);
+                color: $base-text-color;
+            }
+        }
+
+        button {
+            position:relative;
+            background-color: $base-text-color;
+            color: $base-text-color-dark;
+            font-weight: 600;
+
+            &.button-loading {
+                background-color: #708090;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    border-radius: 100%;
+                    left: 50%;
+                    top: 50%;
+                    width: 0px;
+                    height: 0px;
+                    margin-top: -2px;
+                    border: 2px solid rgba(255,255,255,0.5);
+                    border-left-color: #FFF;
+                    border-top-color: #FFF;
+                    animation: spin .6s infinite linear, grow .3s forwards ease-out;
+                }
+            }
+        }
+    }
+
+    .success-panel {
+        flex: 1;
+        display: none;
+
+        .happy-face {
+            float: left;
+            height: 160px;
+            width: 160px;
+            margin-right: 1.2rem;
+        }
+    }
+
+    .failure-panel {
+        flex: 1;
+        display: none;
+        padding: 20px;
+
+        .sad-face {
+            float: left;
+            height: 160px;
+            width: 160px;
+            margin-right: 1.2rem;
+        }
+    }
+
+    .result-button {
+        background-color: transparent;
+        padding: 0.5rem 6rem;
+        border-radius: 1rem;
+        margin-top: 3rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .form-error {
+        border: 2px solid $error-color !important;
+    }
+    
+    .text-error {
+        color: $error-color;
+    }
+    .home-form-container {
+        background-color: $features-background-dark;
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+}
+
+@keyframes spin { 
+    to {
+        transform: rotate(359deg);
+    }
+}
+@keyframes grow { 
+    to {
+        width: 20px;
+        height: 20px;
+        margin-top: -12px;
+    }
+}
