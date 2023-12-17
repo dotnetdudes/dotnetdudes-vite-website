@@ -88,6 +88,10 @@ class Header extends HTMLElement {
         } catch (error) {
             console.error('Failed to initialize adapter:', error);
         }
+        // tbd: move to ready.js and call from here
+        const pnl = document.getElementById('loadingpanel');
+        // console.log(pnl);
+        pnl.style.display = 'none';
     }
     disconnectedCallback() {
         //

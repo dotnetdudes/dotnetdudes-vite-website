@@ -7,8 +7,9 @@ export const onSiteLoaded = () => {
             // const theme = getInitialTheme();
             // console.log(theme);
             // setTheme(theme);
-            const pnl = document.getElementById('loadingpanel');
-            pnl.style.display = 'none';
+            // const pnl = document.getElementById('loadingpanel');
+            // pnl.style.display = 'none';
+            console.log('DOMContentLoaded');
         });
     } catch (error) {
         console.log(error);

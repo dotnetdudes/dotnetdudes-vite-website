@@ -98,20 +98,39 @@
         height: 100%;
       }
       .loading-page {
-        width: 100%;
+        position: fixed;
         height: 100%;
+        width: 100%;
         background-color: #ffffff;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        animation: pulsebg 15s ease infinite;
+        display: block;
+        z-index: 1000;
+      }
+      .pulse {
+        height: 87px;
+        width: 87px;
+        padding: 10px;
+        border-radius: 50%;
+        margin-top: 20%;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        animation: pulse-animation 2s infinite;
       }
       .logotype {
-        margin-top: 3rem;
-        margin-right: auto;
-        margin-left: auto;
+        height: 67px;
+        width: 67px;
+        margin-top: 10%;
         user-select: none;
+      }
+
+      @keyframes pulse-animation {
+        0% {
+          box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+        }
+        100% {
+          box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+        }
       }
     </style>
     <!-- Main CSS -->
@@ -154,11 +173,9 @@
   <body>
     <!-- preloader -->
     <div class="loading-page" id="loadingpanel">
-      <img
-        src="../resources/images/dudes.png"
-        alt="Dotnetdudes logo"
-        class="logotype"
-      />
+      <div class="pulse">
+        <img src="dudes.png" alt="Dotnetdudes logo" class="logotype" />
+      </div>
     </div>
     <!-- main page header -->
     <page-header id="pageHeader"></page-header>
