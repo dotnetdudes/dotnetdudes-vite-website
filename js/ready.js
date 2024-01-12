@@ -1,16 +1,14 @@
-// import { getInitialTheme, setTheme } from './theme';
+import { getInitialTheme, setTheme } from './theme';
 
 export const onSiteLoaded = () => {
     try {
+        // set the theme
+        const theme = getInitialTheme();
+        if (theme) setTheme(theme);
 
-        document.addEventListener('DOMContentLoaded', function () {
-            // const theme = getInitialTheme();
-            // console.log(theme);
-            // setTheme(theme);
-            // const pnl = document.getElementById('loadingpanel');
-            // pnl.style.display = 'none';
-            console.log('DOMContentLoaded');
-        });
+        // hide the loading panel
+        const pnl = document.getElementById('loadingpanel');
+        pnl.style.display = 'none';
     } catch (error) {
         console.log(error);
     }

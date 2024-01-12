@@ -132,6 +132,25 @@
           box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
         }
       }
+      @keyframes pulse-animation-dark {
+        0% {
+          box-shadow: 0 0 0 0px #ffffff;
+        }
+        100% {
+          box-shadow: 0 0 0 20px #ffffff;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        .loading-page {
+          background-color: #000000;
+        }
+        .pulse {
+          animation: pulse-animation-dark 2s infinite;
+        }
+        .logotype {
+          filter: invert(1);
+        }
+      }
     </style>
     <!-- Main CSS -->
     <link rel="stylesheet" href="./styles/index.scss" />
@@ -240,6 +259,5 @@
       <dudes-ads></dudes-ads>
     </aside>
     <page-footer id="pageFooter"></page-footer>
-    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
