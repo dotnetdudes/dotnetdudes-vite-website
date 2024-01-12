@@ -80,6 +80,8 @@ class Header extends HTMLElement {
                 onLoad: 'check-sso',
                 silentCheckSsoRedirectUri: `${location.origin}/silent-sso-check.html`,
             });
+            // console.log('authenticated:', authenticated);
+            // console.log('token:', keycloak.token);
             if (authenticated) {
                 this.showSignOut();
             } else {
@@ -88,6 +90,10 @@ class Header extends HTMLElement {
         } catch (error) {
             console.error('Failed to initialize adapter:', error);
         }
+        // tbd: move to ready.js and call from here
+        const pnl = document.getElementById('loadingpanel');
+        // console.log(pnl);
+        pnl.style.display = 'none';
     }
     disconnectedCallback() {
         //
