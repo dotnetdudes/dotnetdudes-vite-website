@@ -2,13 +2,12 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    // ...some configs
     build: {
       rollupOptions: {
         input: {
           main: resolve(__dirname, 'index.html'),
           about: resolve(__dirname, 'about.html'),
-          apps: resolve(__dirname, 'apps.html'),
+          applist: resolve(__dirname, 'applist.html'),
           blogs: resolve(__dirname, 'blogs.html'),
           contact: resolve(__dirname, 'contact.html'),
           silent: resolve(__dirname, 'silent-sso-check.html'),
@@ -17,6 +16,7 @@ export default defineConfig({
       },
     },
     server: {
+      host: '0.0.0.0',
       port: 3000,
     },
   });

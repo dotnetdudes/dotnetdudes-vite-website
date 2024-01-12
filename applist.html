@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <title>Dotnetdudes Apps</title>
     <meta name="author" content="John Morton" />
-    <meta name="description" content="Dotnetdudes main web hub" />
+    <meta name="description" content="Dotnetdudes main apps page" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="Dotnetdudes website" />
-    <meta property="og:title" content="Dotnetdudes website apps page" />
+    <meta property="og:title" content="Dotnetdudes website blogs page" />
     <meta
       property="og:description"
       content="Dotnetdudes development and applications"
@@ -132,9 +132,28 @@
           box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
         }
       }
+      @keyframes pulse-animation-dark {
+        0% {
+          box-shadow: 0 0 0 0px #ffffff;
+        }
+        100% {
+          box-shadow: 0 0 0 20px #ffffff;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        .loading-page {
+          background-color: #000000;
+        }
+        .pulse {
+          animation: pulse-animation-dark 2s infinite;
+        }
+        .logotype {
+          filter: invert(1);
+        }
+      }
     </style>
     <!-- Main CSS -->
-    <link rel="stylesheet" href="./styles/apps.scss" />
+    <link rel="stylesheet" href="./styles/blogs.scss" />
     <!-- structured data -->
     <script type="application/ld+json">
       {
@@ -167,11 +186,12 @@
     <script type="module">
       import "./components/Header/Header.js";
       import "./components/Footer/Footer.js";
+      import "./components/Blogs/Blogs.js";
     </script>
   </head>
   <body>
-     <!-- preloader -->
-     <div class="loading-page" id="loadingpanel">
+    <!-- preloader -->
+    <div class="loading-page" id="loadingpanel">
       <div class="pulse">
         <img src="dudes.png" alt="Dotnetdudes logo" class="logotype" />
       </div>
@@ -180,10 +200,9 @@
     <page-header id="pageHeader"></page-header>
     <!-- Main content area -->
     <main id="mainArticle">
-      <h1>Apps</h1>
+      <dudes-blogs></dudes-blogs>
     </main>
     <aside id="siteAds"></aside>
     <page-footer id="pageFooter"></page-footer>
-    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
