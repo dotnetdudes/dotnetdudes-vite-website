@@ -23,7 +23,7 @@ const HeaderTemplate = /*html*/ `
         <!-- Menu -->
         <nav class="nav">
             <ul class="menu">
-                <li><a href="apps.html">Apps</a></li>
+                <li><a href="applist.html">Apps</a></li>
                 <li><a href="starters.html">Starter Kits</a></li>
                 <li><a href="blogs.html">Blog</a></li>
                 <li><a href="about.html">About Us</a></li>
