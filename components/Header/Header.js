@@ -80,6 +80,8 @@ class Header extends HTMLElement {
                 onLoad: 'check-sso',
                 silentCheckSsoRedirectUri: `${location.origin}/silent-sso-check.html`,
             });
+            // console.log('authenticated:', authenticated);
+            // console.log('token:', keycloak.token);
             if (authenticated) {
                 this.showSignOut();
             } else {
