@@ -1,0 +1,70 @@
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 20px 10px;
+}/* Style label tag */
+
+.hamb-line {
+    background: #000;
+    display: block;
+    height: 7px;
+    position: relative;
+    width: 40px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: #000;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 12px;
+}
+.hamb-line::after{
+    top: -12px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+@media (prefers-color-scheme: dark) {
+    .hamb-line {
+        background: #e3f2fd;
+    }
+
+    .hamb-line::before,
+    .hamb-line::after{
+        background: #e3f2fd;
+    }
+}
+
+/* Responsiveness */
+@media (min-width: 950px) {
+    .hamb {
+        display: none;
+    }
+}

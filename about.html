@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Dotnetdudes Web</title>
+    <title>About Dotnetdudes</title>
     <meta name="author" content="John Morton" />
     <meta name="description" content="Dotnetdudes main web hub" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="Dotnetdudes website" />
-    <meta property="og:title" content="Dotnetdudes website home page" />
+    <meta property="og:title" content="Dotnetdudes website about page" />
     <meta
       property="og:description"
       content="Dotnetdudes development and applications"
@@ -134,7 +134,7 @@
       }
     </style>
     <!-- Main CSS -->
-    <link rel="stylesheet" href="./styles/index.scss" />
+    <link rel="stylesheet" href="./styles/about.scss" />
     <!-- structured data -->
     <script type="application/ld+json">
       {
@@ -167,9 +167,6 @@
     <script type="module">
       import "./components/Header/Header.js";
       import "./components/Footer/Footer.js";
-      import "./components/Ninja/Ninja.js";
-      import "./components/Ads/Ads";
-      import "./components/Devs/Devs";
     </script>
   </head>
   <body>
@@ -182,62 +179,60 @@
     <!-- main page header -->
     <page-header id="pageHeader"></page-header>
     <!-- Main content area -->
+    <!-- Main content area -->
     <main id="mainArticle">
-      <css-ninja></css-ninja>
-      <h1 id="company">Dotnetdudes Developers</h1>
-      <div class="dudes-devs">
-        <div class="devs-item">
-          <svg class="devs-img">
-            <use
-              xlink:href="icons/laptop-mobile.svg#laptopMobile"
-              href="icons/laptop-mobile.svg#laptopMobile"
-            ></use>
-          </svg>
-          <p>
-            have extensive experience in multi platform application development
-            and integration.
-          </p>
-        </div>
-        <div class="devs-item">
-          <svg class="devs-img">
-            <use
-              xlink:href="icons/site.svg#wwwIcon"
-              href="icons/site.svg#wwwIcon"
-            ></use>
-          </svg>
-          <p>
-            develop high quality, accessible, performance driven web and mobile
-            applications in house or on prem.
-          </p>
-        </div>
-        <div class="devs-item">
-          <svg class="devs-img">
-            <use
-              xlink:href="icons/data-transfer.svg#dataTransfer"
-              href="icons/data-transfer.svg#dataTransfer"
-            ></use>
-          </svg>
-          <p>
-            can help you out dealing with large amounts of data, make sure the
-            streams are not tears.
-          </p>
-        </div>
-        <div class="devs-item">
-          <svg class="devs-img">
-            <use
-              xlink:href="icons/briefcase.svg#briefcaseIcon"
-              href="icons/briefcase.svg#briefcaseIcon"
-            ></use>
-          </svg>
-          <p>
-            are mainly remote, however we can travel to work on your site, we're
-            great collaborators in any event
-          </p>
-        </div>
-      </div>
+      <picture>
+        <source
+          srcset="/images/Skyline_Night.webp"
+          media="(prefers-color-scheme: dark)"
+        />
+        <img
+          src="/images/Perth-City.webp"
+          alt="Perth City, Western Australia"
+          class="about-image"
+        />
+      </picture>
+      <h1>About Us</h1>
+      <p>
+        dotnetdudes is not your traditional development house. We specialises in
+        building websites and applications in scalable and durable technologies.
+        We value quality, performance and innovation.
+      </p>
+      <h2>On the Web</h2>
+      <p>
+        Specializing in building custom web and mobile applications for startups
+        and mature companies.
+      </p>
     </main>
     <aside id="siteAds">
-      <dudes-ads></dudes-ads>
+      <div id="aboutGuy">
+        <div class="container">
+          <div class="avatar">
+            <a href="https://www.linkedin.com/in/john-morton-62031512/">
+              <img
+                src="https://gravatar.com/userimage/132109468/26d16ca033d5b87c231ed894ec08e4ff.jpeg?size=180"
+                alt="Skytsunami"
+              />
+            </a>
+          </div>
+          <div class="content">
+            <h2>John @ dotnetdudes</h2>
+            <p>
+              dotnetdudes was started by John Morton in Perth, Western
+              Australia. Initially as a vehicle to supply .Net components and
+              modules to the DotNetNuke and SharePoint communities.
+            </p>
+            <p>
+              dotnetdudes has been reborn as a developer resource, still going
+              to write great software with much more focus these days on giving
+              something back to the developer community after so many years of
+              receiving great support.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="about-side"></div>
+      <div class="about-side"></div>
     </aside>
     <page-footer id="pageFooter"></page-footer>
     <script type="module" src="./js/index.js"></script>

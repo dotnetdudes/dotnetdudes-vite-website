@@ -10,6 +10,13 @@
   },
   "devDependencies": {
     "sass": "^1.69.5",
-    "vite": "^5.0.8"
+    "vite": "^5.0.8",
+    "vitest": "^1.1.1"
+  },
+  "dependencies": {
+    "@devmehq/email-validator-js": "^1.0.19",
+    "@upjs/facile-validator": "^1.12.3",
+    "apisauce": "^3.0.1",
+    "keycloak-js": "^23.0.3"
   }
 }

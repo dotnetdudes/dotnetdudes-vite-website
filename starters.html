@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dotnetdudes Starter Kits</title>
+    <meta name="author" content="John Morton" />
+    <meta name="description" content="Dotnetdudes main web hub" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Dotnetdudes website" />
+    <meta property="og:title" content="Dotnetdudes website starter kits page" />
+    <meta
+      property="og:description"
+      content="Dotnetdudes development and applications"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.dotnetdudes.com" />
+    <meta property="og:image" content="https://www.dotnetdudes.com/dudes.png" />
+    <meta property="og:image:alt" content="Dotnetdudes logo" />
+    <meta property="og:image:width" content="67" />
+    <meta property="og:image:height" content="67" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Dotnetdudes" />
+    <!-- ICONS -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="favicons/apple-touch-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="favicons/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="favicons/apple-touch-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="favicons/apple-touch-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="favicons/apple-touch-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="favicons/apple-touch-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="favicons/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="196x196"
+      href="favicons/apple-touch-icon-196x196.png"
+    />
+    <link rel="icon" sizes="16x16" href="favicons/favicon-16x16.png" />
+    <link rel="icon" sizes="32x32" href="favicons/favicon-32x32.png" />
+    <link rel="icon" sizes="128x128" href="favicons/favicon-128x128.png" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta
+      name="msapplication-TileImage"
+      content="favicons/mstile-144x144.png"
+    />
+    <meta
+      name="msapplication-square70x70logo"
+      content="favicons/mstile-70x70.png"
+    />
+    <meta
+      name="msapplication-square150x150logo"
+      content="favicons/mstile-150x150.png"
+    />
+    <meta
+      name="msapplication-wide310x150logo"
+      content="favicons/mstile-310x150.png"
+    />
+    <meta
+      name="msapplication-square310x310logo"
+      content="favicons/mstile-310x310.png"
+    />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <!-- Page Preloader CSS -->
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      .loading-page {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: #ffffff;
+        display: block;
+        z-index: 1000;
+      }
+      .pulse {
+        height: 87px;
+        width: 87px;
+        padding: 10px;
+        border-radius: 50%;
+        margin-top: 20%;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        animation: pulse-animation 2s infinite;
+      }
+      .logotype {
+        height: 67px;
+        width: 67px;
+        margin-top: 10%;
+        user-select: none;
+      }
+
+      @keyframes pulse-animation {
+        0% {
+          box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+        }
+        100% {
+          box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+        }
+      }
+    </style>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./styles/starters.scss" />
+    <!-- structured data -->
+    <script type="application/ld+json">
+      [
+        {
+          "@context": "http://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "React Starter Kit",
+          "image": "https://dotnetdudes.com/react-2.svg",
+          "offers": {
+            "@type": "Offer",
+            "price": "0"
+          },
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Linux, OSX, Windows",
+          "downloadUrl": "https://github.com/dotnetdudes/react-starter",
+          "author": {
+            "@type": "Person",
+            "name": "John Morton",
+            "url": "https://www.linkedin.com/in/john-morton-62031512/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Dotnetdudes"
+          }
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "React Native Starter Kit",
+          "image": "https://dotnetdudes.com/react-native-1.svg",
+          "offers": {
+            "@type": "Offer",
+            "price": "0"
+          },
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Linux, OSX, Windows",
+          "downloadUrl": "https://github.com/dotnetdudes/react-native-starter",
+          "author": {
+            "@type": "Person",
+            "name": "John Morton",
+            "url": "https://www.linkedin.com/in/john-morton-62031512/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Dotnetdudes"
+          }
+        }
+      ]
+    </script>
+    <!-- import web components and js -->
+    <script type="module">
+      import "./components/Header/Header.js";
+      import "./components/Footer/Footer.js";
+      import { onStarterLoaded } from "./js/starters.js";
+      onStarterLoaded();
+    </script>
+  </head>
+  <body>
+    <!-- preloader -->
+    <div class="loading-page" id="loadingpanel">
+      <div class="pulse">
+        <img src="dudes.png" alt="Dotnetdudes logo" class="logotype" />
+      </div>
+    </div>
+    <!-- main page header -->
+    <page-header id="pageHeader"></page-header>
+    <!-- Main content area -->
+    <main id="mainArticle">
+      <h1>Starter Kits for React and React Native</h1>
+      <p>
+        The Starter kits for React and React Native are built on the great work
+        done at the
+        <a href="https://www.reactboilerplate.com/" target="_blank"
+          >React Boilerplate</a
+        >
+        and
+        <a
+          href="https://cansahin.gitbook.io/react-boilerplate-cra-template/"
+          target="_blank"
+          >React Boilerplate CRA</a
+        >
+        projects. The starters are simply instances of the way we use these
+        templates and are an exercise in providing common coding patterns and
+        tooling across related React and React Native projects.
+      </p>
+      <div id="starter-kit-uses" class="starter-kit-features">
+        <div class="starter-kit-feature-item mui">
+          <a href="https://mui.com/" target="_blank">
+            <span class="item-text">Material UI</span>
+          </a>
+        </div>
+        <div class="starter-kit-feature-item jest">
+          <a href="https://jestjs.io/" target="_blank">
+            <span class="item-text">Jest</span>
+          </a>
+        </div>
+        <div class="starter-kit-feature-item testing-library">
+          <a
+            href="https://testing-library.com/docs/react-testing-library/intro/"
+            target="_blank"
+          >
+            <span class="item-text">Testing Library</span>
+          </a>
+        </div>
+        <div class="starter-kit-feature-item sass">
+          <a href="https://sass-lang.com/" target="_blank">
+            <span class="item-text">Sass</span>
+          </a>
+        </div>
+        <div class="starter-kit-feature-item typescript">
+          <a href="https://www.typescriptlang.org/" target="_blank">
+            <span class="item-text">Typescript</span>
+          </a>
+        </div>
+        <div class="starter-kit-feature-item docker">
+          <a href="https://www.docker.com/" target="_blank">
+            <span class="item-text">Docker</span>
+          </a>
+        </div>
+      </div>
+      <div class="starter-kits">
+        <div class="starter-kit-item">
+          <div class="starter-kit-item-content">
+            <img
+              src="/icons/react-2.svg"
+              alt="React Logo"
+              title="React Logo"
+              class="starter-logo"
+            />
+            <h2>React Starter Kit</h2>
+            <ul>
+              <li>Code generation</li>
+              <li>Tailwind CSS</li>
+              <li>Material UI</li>
+              <li>i18n</li>
+              <li>State management with Redux</li>
+              <li>Linting with Eslint and Prettier</li>
+              <li>Static Type Checking. TypeScript</li>
+              <li>Test harness and continuous test watch mode.</li>
+              <li>WebPack configuration for build and development</li>
+            </ul>
+            <button type="button" class="starter-button" id="reactStarter">
+              <img
+                src="/icons/github.svg"
+                alt="github logo"
+                title="Link to Github repo"
+                class="repo-logo"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="starter-kit-item">
+          <div class="starter-kit-item-content">
+            <img
+              src="/icons/react-native-1.svg"
+              alt="React Native Logo"
+              title="React native Logo"
+              class="starter-logo"
+            />
+            <h2>React Native Starter Kit</h2>
+            <ul>
+              <li>Code Generation</li>
+              <li>React Native Paper</li>
+              <li>Flipper Integration</li>
+              <li>i18n</li>
+              <li>State management with Redux</li>
+              <li>Linting with Eslint and Prettier</li>
+              <li>Static Type Checking. TypeScript</li>
+              <li>Test harness and continuous test watch mode.</li>
+              <li>Metro bundler configuration for build and development</li>
+            </ul>
+            <button type="button" class="starter-button" id="nativeStarter">
+              <img
+                src="/icons/github.svg"
+                alt="github logo"
+                title="Link to Github repo"
+                class="repo-logo"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside id="siteAds">
+      <h2>We love</h2>
+      <ul class="starters-we-love">
+        <li class="item cra-item">
+          <a
+            href="https://cansahin.gitbook.io/react-boilerplate-cra-template/"
+            target="_blank"
+            >React Boilerplate CRA</a
+          >
+        </li>
+        <li class="item rbp-item">
+          <a href="https://www.reactboilerplate.com/" target="_blank"
+            >React Boilerplate (Discontinued)</a
+          >
+        </li>
+        <li class="item infinite-red-item">
+          <a href="https://github.com/infinitered/ignite" target="_blank"
+            >React Native Ignite</a
+          >
+        </li>
+        <li class="item redux-saga-item">
+          <a href="https://redux-saga.js.org/" target="_blank">Redux Saga</a>
+        </li>
+        <li class="item infinite-red-item">
+          <a href="https://github.com/infinitered/apisauce" target="_blank"
+            >ApiSauce</a
+          >
+        </li>
+        <li class="item redux-toolkit-item">
+          <a href="https://redux-toolkit.js.org/" target="_blank"
+            >Redux Toolkit</a
+          >
+        </li>
+      </ul>
+    </aside>
+    <page-footer id="pageFooter"></page-footer>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
