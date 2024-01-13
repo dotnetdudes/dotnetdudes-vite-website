@@ -9,12 +9,6 @@ const keycloak = new Keycloak({
     clientId: import.meta.env.VITE_AUTH_SERVER_CLIENT_ID,    
 });
 
-console.log('VITE_AUTH_SERVER_URL:', import.meta.env.VITE_AUTH_SERVER_URL);
-console.log('VITE_AUTH_SERVER_REALM:', import.meta.env.VITE_AUTH_SERVER_REALM);
-console.log('VITE_AUTH_SERVER_CLIENT_ID:', import.meta.env.VITE_AUTH_SERVER_CLIENT_ID);
-
-
-
 class Header extends HTMLElement {
     constructor() {
         super();
