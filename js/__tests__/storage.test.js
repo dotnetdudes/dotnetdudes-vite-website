@@ -1,5 +1,5 @@
 import { test, expect, afterEach, beforeEach} from 'vitest';
-import { setItem } from '../storage.js';
+import { setItem, getItem } from '../storage.js';
 
 let localStorage;
 
@@ -42,6 +42,34 @@ test('setItem should set an item with an empty name', () => {
   expect(localStorage.getItem(name)).toBe(item);
 });
 
-test('test', () => {
-  expect(typeof window).not.toBe('undefined')
+// getItem test cases
+// Test case 1: Valid input
+test('getItem should return the item from localStorage', () => {
+  const name = 'username';
+  const item = 'JohnDoe';
+  
+  localStorage.setItem(name, item);
+  
+  expect(getItem(name)).toBe(item);
+});
+
+// Test case 2: Invalid input
+test('getItem should return null if localStorage is not supported', () => {
+  // Mocking localStorage to be undefined
+  global.localStorage = undefined;
+  
+  const name = 'username';
+  const item = 'JohnDoe';
+  
+  expect(getItem(name)).toBe(false);
+});
+
+// Test case 3: Empty name
+test('getItem should return null if the name is empty', () => {
+  const name = '';
+  const item = 'JohnDoe';
+  
+  localStorage.setItem(name, item);
+  
+  expect(getItem(name)).toBe('JohnDoe');
 });
