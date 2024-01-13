@@ -7,7 +7,7 @@ export default defineConfig({
         input: {
           main: resolve(__dirname, 'index.html'),
           about: resolve(__dirname, 'about.html'),
-          applist: resolve(__dirname, 'applist.html'),
+          mobile: resolve(__dirname, 'mobile.html'),
           blogs: resolve(__dirname, 'blogs.html'),
           contact: resolve(__dirname, 'contact.html'),
           silent: resolve(__dirname, 'silent-sso-check.html'),
