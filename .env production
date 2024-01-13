@@ -1,5 +1,0 @@
-VITE_API_URL="https://api.dotnetdudes.com"
-VITE_API_KEY="a1dce51c-glrt-7553-iyiw-dac8a402f96d"
-VITE_AUTH_SERVER_URL="https://identity.dotnetdudes.com"
-VITE_AUTH_SERVER_CLIENT_ID="dudes-web"
-VITE_AUTH_SERVER_REALM="dotnetdudes"

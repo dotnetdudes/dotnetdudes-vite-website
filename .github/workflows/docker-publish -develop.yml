@@ -37,6 +37,15 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_HUB_USER_NAME }}/dotnetdudes-vite-website-develop:latest
           file: ./Dockerfile.develop
+          build-args: |
+            NODE_VERSION=${{ matrix.node-version }}
+            OS=${{ matrix.os }}
+            ARCH=${{ matrix.arch }}
+            VITE_API_URL=http://localhost:5400
+            VITE_API_KEY=${{ secrets.VITE_API_KEY }}
+            VITE_AUTH_SERVER_URL=${{ secrets.VITE_AUTH_SERVER_URL }}
+            VITE_AUTH_SERVER_CLIENT_ID=dudes-dev
+            VITE_AUTH_SERVER_REALM=${{ secrets.VITE_AUTH_SERVER_REALM }}
 
       - name: Image digest
         run: echo ${{ steps.docker.outputs.digest }}
