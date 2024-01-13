@@ -96,3 +96,7 @@ prod/
 
 
 *.local
+
+.env development
+
+.env production
