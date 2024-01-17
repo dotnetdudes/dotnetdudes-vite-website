@@ -21,3 +21,6 @@ node_modules/*
 .env
 .env.development
 .env.production
+
+reports/*
+coverage/*
