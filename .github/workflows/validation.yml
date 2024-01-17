@@ -64,7 +64,7 @@ jobs:
                 result-type: lines
                 badge-path: badge-lines.svg
                 badge-text: Coverage (Lines)
-                upload-badge: ${{ steps.branch.outputs.branch == 'main' }}
+                upload-badge: false
 
             - name: Create Statements Badge
               uses: wjervis7/vitest-badge-action@v1.0.0
@@ -73,7 +73,7 @@ jobs:
                 result-type: statements
                 badge-path: badge-statements.svg
                 badge-text: Coverage (Statements)
-                upload-badge: ${{ steps.branch.outputs.branch == 'main' }}
+                upload-badge: false
 
             - name: Create Functions Badge
               uses: wjervis7/vitest-badge-action@v1.0.0
@@ -82,7 +82,7 @@ jobs:
                 result-type: functions
                 badge-path: badge-functions.svg
                 badge-text: Coverage (Functions)
-                upload-badge: ${{ steps.branch.outputs.branch == 'main' }}
+                upload-badge: false
 
             - name: Create Branch Badge
               uses: wjervis7/vitest-badge-action@v1.0.0
@@ -91,7 +91,7 @@ jobs:
                 result-type: branches
                 badge-path: badge-branches.svg
                 badge-text: Coverage (Branches)
-                upload-badge: ${{ steps.branch.outputs.branch == 'main' }}
+                upload-badge: false
 
             - name: Commit changes
               uses: stefanzweifel/git-auto-commit-action@v5
