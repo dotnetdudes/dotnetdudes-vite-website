@@ -12,4 +12,5 @@ export const getItem = (name) => {
 export const clearStorage = () => {
     if (!window.localStorage) return false;
     window.localStorage.clear();
+    return true;
 };

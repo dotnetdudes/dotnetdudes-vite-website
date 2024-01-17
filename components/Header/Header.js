@@ -1,7 +1,7 @@
 // <Header></Header>
+import Keycloak from 'keycloak-js';
 import HeaderTemplate from "./template";
 import { onSiteLoaded } from "../../js/ready";
-import Keycloak from 'keycloak-js';
 
 const keycloak = new Keycloak({
     url: import.meta.env.VITE_AUTH_SERVER_URL,
@@ -15,17 +15,14 @@ class Header extends HTMLElement {
     }
 
     async signIn() {
-        console.log('sign in');
         await keycloak.login();
     }
 
     async signOut() {
-        console.log('sign out');
         await keycloak.logout();
     }
 
     async myAccount() {
-        console.log('my account');
         await keycloak.accountManagement();
     }
 
@@ -89,16 +86,11 @@ class Header extends HTMLElement {
                 this.showSignIn();
             }
         } catch (error) {
+            // eslint-disable-next-line no-console
             console.error('Failed to initialize adapter:', error);
         }
         onSiteLoaded();
         
-    }
-    disconnectedCallback() {
-        //
-    }
-    attributeChangedCallback(attrName, oldVal, newVal) {
-        //
     }
 }
 
