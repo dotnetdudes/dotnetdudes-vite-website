@@ -37,12 +37,19 @@ export default defineConfig({
       timeout: 60000,
       reporter: ['html', 'json', 'default'],
       outputFile: {
-        json: './reports/json-report.json',
-        html: './reports/html-report.html',
+        json: './reports/index.json',
+        html: './reports/index.html',
       },
       coverage: {
         provider: 'v8',
-        reporter: ['text', 'json', ['html', { subdir: './reports/html' }]],
+        reporter: ['text', 'json', ['html', { subdir: './reports/html' }], 'json-summary'],
+        thresholds: {
+          lines: 60,
+          branches: 60,
+          functions: 60,
+          statements: 60
+        },
+        reportOnFailure: true,
       },
     }
   });
