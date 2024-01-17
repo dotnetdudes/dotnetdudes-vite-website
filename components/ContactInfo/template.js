@@ -1,4 +1,4 @@
-const ContactInfoTemplate = /*html*/ `
+const ContactInfoTemplate = /* html */ `
 <ul class="contact-info">
     <li class="contact-info-item email-item" id="email-item">Email</li>
     <li class="contact-info-item mobile-item" id="mobile-item">+61 402 888 801</li>

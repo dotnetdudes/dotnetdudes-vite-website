@@ -20,7 +20,7 @@ jobs:
       with:
         node-version: '21.x'
     - name: 'Install Deps'
-      run: npm install
+      run: npm ci
     - name: 'Run Tests'
       run: npm run coverage
     - name: 'Report Coverage'

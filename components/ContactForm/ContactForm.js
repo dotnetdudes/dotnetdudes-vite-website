@@ -1,7 +1,6 @@
 // <ContactForm></ContactForm>
 import ContactFormTemplate from './template';
 import apiManager from '../../services/apiManager';
-// import dudesApi from '../../services/api';
 
 class ContactForm extends HTMLElement {
     constructor() {
@@ -17,7 +16,7 @@ class ContactForm extends HTMLElement {
     }
 
     cleanFormFields(form) {
-        let formFields = Array.from(form.elements).filter((tag) =>
+        const formFields = Array.from(form.elements).filter((tag) =>
             ['textarea', 'input'].includes(tag.tagName.toLowerCase())
         );
         formFields.forEach((field) => {
@@ -27,8 +26,8 @@ class ContactForm extends HTMLElement {
 
     validate(form) {
         let valid = false;
-        const emailField = form.elements['email'];
-        const messageField = form.elements['message'];
+        const emailField = form.elements.email;
+        const messageField = form.elements.message;
         const validEmail = this.validateEmail(emailField);
         const validMessage = this.validateMessage(messageField);
         if (validEmail && validMessage) valid = true;
@@ -38,7 +37,7 @@ class ContactForm extends HTMLElement {
     validateEmail(emailField) {
         let validRequiredEmail = false;
         let validEmail = false;
-        const label = document.querySelector('[for=' + emailField.id + ']');
+        const label = document.querySelector(`[for=${  emailField.id  }]`);
         if (!emailField.value) {
             label.innerHTML = 'Email is a required field';
             emailField.classList.add('form-error');
@@ -68,7 +67,7 @@ class ContactForm extends HTMLElement {
 
     validateMessage(messageField) {
         let validMessage = false;
-        const label = document.querySelector('[for=' + messageField.id + ']');
+        const label = document.querySelector(`[for=${  messageField.id  }]`);
         if (messageField.value) validMessage = true;
         if (!validMessage) {
             messageField.classList.add('form-error');
@@ -83,9 +82,9 @@ class ContactForm extends HTMLElement {
 
     // handle the submission to api
     async submitForm(form) {
-        const emailField = form.elements['email'];
-        const messageField = form.elements['message'];
-        const formButton = form.elements['submitButton'];
+        const emailField = form.elements.email;
+        const messageField = form.elements.message;
+        const formButton = form.elements.submitButton;
         const failurePanel = document.getElementById('failurePanel');
         const successPanel = document.getElementById('successPanel');
         formButton.disabled = true;
@@ -93,8 +92,7 @@ class ContactForm extends HTMLElement {
         const contactInfo = {};
         contactInfo.Email = emailField.value;
         contactInfo.Message = messageField.value;
-        // console.log(contactInfo);
-        //dudesApi
+        
         apiManager.getInstance()
             .postContactForm(contactInfo)
             .then((response) => {
@@ -109,6 +107,7 @@ class ContactForm extends HTMLElement {
                 }
             })
             .catch((error) => {
+                // eslint-disable-next-line no-console
                 console.log(error);
                 form.style.display = 'none';
                 failurePanel.style.display = 'inline-block';
@@ -123,8 +122,8 @@ class ContactForm extends HTMLElement {
         this.innerHTML = ContactFormTemplate;
 
         const form = document.getElementById('home-form');
-        const emailField = form.elements['email'];
-        const messageField = form.elements['message'];
+        const emailField = form.elements.email;
+        const messageField = form.elements.message;
         const buttons = document.querySelectorAll('.result-button');
         const validateForm = async () => this.validate(form);
         const validateFormEmail = async () => this.validateEmail(emailField);
@@ -134,41 +133,38 @@ class ContactForm extends HTMLElement {
 
         // add click event to result buttons
         buttons.forEach(button => {
-            button.addEventListener('click', function handleClick(event) {
+            button.addEventListener('click', () => {
               returnToForm();
             });
           });
 
         // handle the form submission
-        form.addEventListener('submit', async function (e) {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const valid = await validateForm();
             if (!valid) return false;
             await sendContactForm();
+            return true;
         });
 
         // change event on email field
-        emailField.addEventListener('change', async function (e) {
+        emailField.addEventListener('change', async () => {
             const valid = await validateFormEmail(emailField);
-            // console.log(valid);
+            return valid;
         });
 
         // blur event on email field
-        emailField.addEventListener('blur', async function (e) {
+        emailField.addEventListener('blur', async () => {
             const valid = await validateFormEmail(emailField);
-            // console.log(valid);
+            return valid;
         });
 
         // blur event on message field
-        messageField.addEventListener('blur', function (e) {
+        messageField.addEventListener('blur', () => {
             const valid = validateFormMessage(messageField);
-            // console.log(valid);
+            return valid;
         });
     }
-
-    disconnectedCallback() {}
-
-    attributeChangedCallback(attrName, oldVal, newVal) {}
 }
 
 window.customElements.define('contact-form', ContactForm);

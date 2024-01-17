@@ -1,4 +1,4 @@
-const commentTemplate = /*html*/ `
+const commentTemplate = /* html */ `
 <div itemscope itemtype="https://schema.org/Comment">
     <p itemprop="author" itemscope itemtype="https://schema.org/Person">
     <span itemprop="name">
@@ -10,3 +10,5 @@ const commentTemplate = /*html*/ `
     </p>
 </div>
 `;
+
+export default commentTemplate;

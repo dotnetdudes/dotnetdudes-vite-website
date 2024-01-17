@@ -1,4 +1,4 @@
-const ContactFormTemplate = /*html*/ `
+const ContactFormTemplate = /* html */ `
 <span id="homeform" class="home-form-container">
     <form action="" class="home-form" id="home-form" novalidate>
         <input id="email" name="email" placeholder="Please enter your email" type="email" class="home-input">

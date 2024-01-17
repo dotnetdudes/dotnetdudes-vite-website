@@ -59,7 +59,6 @@ test('getItem should return null if localStorage is not supported', () => {
   global.localStorage = undefined;
   
   const name = 'username';
-  const item = 'JohnDoe';
   
   expect(getItem(name)).toBe(false);
 });

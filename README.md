@@ -1,6 +1,7 @@
 # dotnetdudes-website
 
 The main dotnetdudes website.
+![Validate Build](https://github.com/dotnetdudes/dotnetdudes-vite-website/actions/workflows/validation.yml/badge.svg)
 
 ## Architecture
 Started out as a traditional, multi page, html website bundled with parcel.  
