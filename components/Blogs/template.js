@@ -1,4 +1,4 @@
-const BlogsTemplate = /*html*/ `
+const BlogsTemplate = /* html */ `
     <h1>Blogs</h1>
 `;
 

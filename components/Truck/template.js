@@ -1,4 +1,4 @@
-const TruckTemplate = /*html*/ `
+const TruckTemplate = /* html */ `
 <div class="truck-container">
     <div class="loop-wrapper">
         <div class="mountains"></div>

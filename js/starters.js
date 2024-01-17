@@ -6,13 +6,13 @@ export const onStarterLoaded = () => {
         const openReactNativeStarter = () => {
             window.open("https://github.com/dotnetdudes/react-native-starter", "_blank");
         }
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', () => {
             const btn = document.getElementById('reactStarter');
             const reactBtn = document.getElementById('nativeStarter');
             btn.addEventListener('click', openReactStarter);
             reactBtn.addEventListener('click', openReactNativeStarter);
         });
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 }

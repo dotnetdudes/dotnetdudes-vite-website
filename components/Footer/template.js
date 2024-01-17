@@ -1,4 +1,4 @@
-const FooterTemplate = /*html*/ `
+const FooterTemplate = /* html */ `
 <footer>
     <div>
         <div class="copyright" itemprop="copyrightNotice">

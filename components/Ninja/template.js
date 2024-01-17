@@ -1,4 +1,4 @@
-const NinjaTemplate = /*html*/ `
+const NinjaTemplate = /* html */ `
 <span id="ninja">
     <!-- CSS Ninja -->
     <div class="ninja green">
