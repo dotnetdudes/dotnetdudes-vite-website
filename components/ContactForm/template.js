@@ -7,7 +7,7 @@ const ContactFormTemplate = /*html*/ `
         <label for="message">Message</label>
         <button type="submit" id="submitButton">Send Message</button>
     </form>
-    <div id="successPanel" class="success-panel">
+    <div id="successPanel" data-testid="successPanel" class="success-panel">
         <img src="/icons/smile-beam.svg" alt="happy face icon" title="happy face icon" class="happy-face face-margin" />
         <h2>It looks like that worked out.</h2>
         <p>Thank you for your message.</p>
@@ -15,7 +15,7 @@ const ContactFormTemplate = /*html*/ `
         <p>Come back and chat again soon.</p>
         <button type="button" class="result-button">Go back to the form now.</button>
     </div>
-    <div id="failurePanel" class="failure-panel">
+    <div id="failurePanel" data-testid="failurePanel" class="failure-panel">
         <img src="/icons/sad-tear.svg" alt="sad face icon" title="sad face icon" class="sad-face face-margin" />
         <h2>It looks like that didn't work out.</h2>
         <p>Well that was dissapointing.</p>

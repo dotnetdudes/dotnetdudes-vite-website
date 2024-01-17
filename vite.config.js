@@ -1,5 +1,6 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
+import { ViteMinifyPlugin } from 'vite-plugin-minify'
 
 export default defineConfig({
     build: {
@@ -15,6 +16,17 @@ export default defineConfig({
         },
       },
     },
+    minify: 'esbuild',
+    plugins: [
+      ViteMinifyPlugin({
+        removeConsole: true,
+        removeDebugger: true,
+        removeWhitespace: true,
+        removeComments: true,
+        compress: true,
+        verbose: true,
+      }),
+    ],
     server: {
       host: '0.0.0.0',
       port: 3000,
