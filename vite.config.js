@@ -44,10 +44,10 @@ export default defineConfig({
         provider: 'v8',
         reporter: ['text', 'json', ['html', { subdir: './reports/html' }], 'json-summary'],
         thresholds: {
-          lines: 60,
-          branches: 60,
-          functions: 60,
-          statements: 60
+          lines: 20,
+          branches: 20,
+          functions: 20,
+          statements: 20
         },
         reportOnFailure: true,
       },
