@@ -13,6 +13,7 @@ const createDudesApi = () => {
   
     return {
       postContactForm,
+      axiosInstance: api.axiosInstance
     };
   };
   export default createDudesApi();
