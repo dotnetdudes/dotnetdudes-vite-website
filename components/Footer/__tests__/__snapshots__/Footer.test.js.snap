@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Footer > Footer component should match current snapshot 1`] = `
+"<page-footer>
+<footer>
+    <div>
+        <div class="copyright" itemprop="copyrightNotice">
+            © Copyright <strong>Dotnetdudes</strong>. All rights
+            reserved.
+            <div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+                <div class="copyright-name">Designed and developed by <span itemprop="name">Dotnetdudes</span></div>
+            </div>
+        </div>
+       
+        <div class="credits">UIcons by <a href="https://www.flaticon.com/uicons">Flaticon</a></div>
+    </div>
+</footer>
+</page-footer>"
+`;

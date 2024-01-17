@@ -1,6 +1,7 @@
 // <ContactForm></ContactForm>
 import ContactFormTemplate from './template';
-import dudesApi from '../../services/api';
+import apiManager from '../../services/apiManager';
+// import dudesApi from '../../services/api';
 
 class ContactForm extends HTMLElement {
     constructor() {
@@ -92,16 +93,17 @@ class ContactForm extends HTMLElement {
         const contactInfo = {};
         contactInfo.Email = emailField.value;
         contactInfo.Message = messageField.value;
-        console.log(contactInfo);
-        dudesApi
+        // console.log(contactInfo);
+        //dudesApi
+        apiManager.getInstance()
             .postContactForm(contactInfo)
             .then((response) => {
                 if (response.ok) {
-                    console.log(response);
+                    // console.log(response);
                     form.style.display = 'none';
                     successPanel.style.display = 'inline-block';
                 } else {
-                    console.log(response);
+                    // console.log(response);
                     form.style.display = 'none';
                     failurePanel.style.display = 'inline-block';
                 }
