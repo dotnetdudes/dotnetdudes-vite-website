@@ -13,7 +13,7 @@ Testing with Vitest and Testing Library DOM.
 ## Deployment
 Deploying development and production docker images to Docker Hub.  
 
-![Docker publish image](https://github.com/dotnetdudes/dotnetdudes-vite-website/actions/workflows/docker-publish.yml/badge.svg) 
+![Docker publish image](https://github.com/dotnetdudes/dotnetdudes-vite-website/actions/workflows/docker-publish.yml/badge.svg)  
 ![Docker publish development image](https://github.com/dotnetdudes/dotnetdudes-vite-website/actions/workflows/docker-publish-develop.yml/badge.svg)  
 
 [menu css](https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/)  
