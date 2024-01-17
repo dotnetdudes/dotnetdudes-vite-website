@@ -1,4 +1,4 @@
-const articlesTemplate /*html*/  = `
+const articlesTemplate = /* html */ `
     <article>
         <div class="article-item-container">
             <header class="article-item-header">

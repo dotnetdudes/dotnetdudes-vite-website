@@ -1,4 +1,4 @@
-const articleTemplate = /*html*/ `
+const articleTemplate = /* html */ `
 <article itemscope itemtype="https://schema.org/BlogPosting" itemid="https://www.dataliberate.com/2019/05/14/library-metadata-evolution-final-mile/" itemprop="blogPost">
   <meta itemprop="wordCount" content="481">
   <header>
@@ -43,3 +43,5 @@ const articleTemplate = /*html*/ `
   </footer>
 </article>
 `;
+
+export default articleTemplate;

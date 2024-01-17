@@ -10,6 +10,6 @@ export const onSiteLoaded = () => {
         const pnl = document.getElementById('loadingpanel');
         pnl.style.display = 'none';
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 };

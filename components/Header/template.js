@@ -1,4 +1,4 @@
-const HeaderTemplate = /*html*/ `
+const HeaderTemplate = /* html */ `
 <header>
     <a href="/" title="Dotnetdudes logo">
         <span class="logo-image"></span>

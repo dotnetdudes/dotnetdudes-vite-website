@@ -1,4 +1,4 @@
-const AdsTemplate = /*html*/ `
+const AdsTemplate = /* html */ `
 <div>
     <svg class="dudes-ads dudes-apps">
         <use xlink:href='/icons/install_mobile_FILL0_wght200_GRAD0_opsz48.svg#mobile' href="/icons/install_mobile_FILL0_wght200_GRAD0_opsz48.svg#mobile"></use>

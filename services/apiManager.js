@@ -1,15 +1,15 @@
 import dudesApi from './api';
 
 // generate javascript singleton
-const apiManager = (function () {
-    var instance;
+const apiManager = (() => {
+    let instance;
 
     function createInstance() {
         return dudesApi;
     }
 
     return {
-        getInstance: function () {
+        getInstance: () => {
             if (!instance) {
                 instance = createInstance();
             }

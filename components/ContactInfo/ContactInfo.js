@@ -5,6 +5,7 @@ class ContactInfo extends HTMLElement {
     constructor() {
         super();
     }
+
     encMail = 'am9obkBkb3RuZXRkdWRlcy5jb20=';
 
     getEmail() {
@@ -12,11 +13,8 @@ class ContactInfo extends HTMLElement {
     }
 
     sendEmail() {
-        console.log('send');
         const email = this.getEmail();
-        // window.open(`mailto:${email}?subject=Dudes%20Contact%20Form`, "mailer", "", false);
         document.location.href = `mailto:${email}?subject=Dudes%20Contact%20Form`;
-        // return false;
     }
 
     callDudes() {
@@ -46,30 +44,24 @@ class ContactInfo extends HTMLElement {
         const emailInfo = document.getElementById('email-item');
         emailInfo.innerText = email;
         // click event on email field
-        emailInfo.addEventListener('click', function (e) {
+        emailInfo.addEventListener('click', () => {
             sendMessage();
         });
 
         const mobileInfo = document.getElementById('mobile-item');
-        mobileInfo.addEventListener('click', function (e) {
+        mobileInfo.addEventListener('click', () => {
             phoneDudes();
         });
 
         const githubInfo = document.getElementById('github-item');
-        githubInfo.addEventListener('click', function (e) {
+        githubInfo.addEventListener('click', () => {
             gotoGithub();
         });
 
         const linkedinInfo = document.getElementById('linkedin-item');
-        linkedinInfo.addEventListener('click', function (e) {
+        linkedinInfo.addEventListener('click', () => {
             gotoLinkedin();
         });
-    }
-    disconnectedCallback() {
-        //
-    }
-    attributeChangedCallback(attrName, oldVal, newVal) {
-        //
     }
 }
 

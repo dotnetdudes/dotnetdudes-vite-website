@@ -21,14 +21,6 @@ class Blogs extends HTMLElement {
   connectedCallback() {
     this.innerHTML = BlogsTemplate;
   }
-
-  disconnectedCallback() {
-    //
-  }
-
-  attributeChangedCallback(attrName, oldVal, newVal) {
-    //
-  }
 }
 
 window.customElements.define('dudes-blogs', Blogs);
