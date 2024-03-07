@@ -14,18 +14,18 @@ class ContactInfo extends HTMLElement {
 
     sendEmail() {
         const email = this.getEmail();
-        document.location.href = `mailto:${email}?subject=Dudes%20Contact%20Form`;
+        window.location = `mailto:${email}?subject=Dudes%20Contact%20Form`;
     }
 
     callDudes() {
-        document.location.href = `tel:+61402888801`;
+        window.location = `tel:+61402888801`;
     }
 
     dudesGithub() {
         window.open('https://github.com/dotnetdudes', '_blank');
     }
 
-    dudesLInkedIn() {
+    dudesLinkedIn() {
         window.open(
             'https://www.linkedin.com/company/3506154/admin/feed/posts/',
             '_blank'
@@ -38,7 +38,7 @@ class ContactInfo extends HTMLElement {
         const sendMessage = () => this.sendEmail();
         const phoneDudes = () => this.callDudes();
         const gotoGithub = () => this.dudesGithub();
-        const gotoLinkedin = () => this.dudesLInkedIn();
+        const gotoLinkedin = () => this.dudesLinkedIn();
 
         const email = this.getEmail();
         const emailInfo = document.getElementById('email-item');

@@ -91,9 +91,12 @@ typings/
 .dynamodb/
 
 dist/
+dist
 
+prod
 prod/
 
+reports
 reports/*
 
 

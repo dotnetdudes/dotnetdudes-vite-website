@@ -8,6 +8,10 @@ Started out as a traditional, multi page, html website bundled with parcel.
 
 Morphed into a site using web components. Changed to Vite bundler when parcel had problems with the 'keycloak.js' library.  
 
+Used VanillaJs, needed the practice, been writing so much TypeScript !!
+
+Uses CSS Grid and ES modules, not targeted at older browsers ʘ‿ʘ  
+
 ## Testing
 Testing with Vitest and Testing Library DOM.
 
